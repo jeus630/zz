@@ -378,6 +378,7 @@ a {
           align-items: center;
   letter-spacing: 1px;
   line-height: 30px;
+  position: relative;
   padding-left: 80px;
 }
 
@@ -509,6 +510,35 @@ a {
 
 .about-us-right-main::first-letter {
   padding-left: 30px;
+}
+
+#map {
+  display: none;
+  width: 50%;
+  height: 50vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -75%);
+          transform: translate(-50%, -75%);
+  opacity: 1;
+}
+
+.removeMap {
+  display: none;
+  opacity: 1;
+  position: absolute;
+  top: 6%;
+  left: 25%;
+  background-color: white;
+  color: #431596;
+  border: 3px double black;
+  border-radius: 15%;
+  cursor: pointer;
+}
+
+.removeMap:active {
+  opacity: .7;
 }
 
 /* about us end */
