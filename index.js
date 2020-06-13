@@ -1,3 +1,6 @@
+/*
+About Us Image & Content Event
+*/
 (()=>{      
     const aboutUsRight = document.querySelector(".about-us-right");
     const aboutUsLeft = document.querySelector(".about-us-left-image");
@@ -43,6 +46,14 @@
     
 })();
 
+/*
+About Us Image & Content Event End
+*/
+
+/*
+Hidden Side Bar Event
+*/
+
 (()=>{
     const tags = document.querySelectorAll(".tags");
     const checkBox = document.querySelector("#check-side-bar");
@@ -64,3 +75,38 @@
     })
 
 })();
+
+/*
+Hidden Side Bar Event End
+*/
+
+/*
+About Us Google Map Event
+*/
+let map;
+const aboutUsImg = document.querySelector(".about-us-left-image").childNodes[1];   
+const divMap = document.querySelector("#map");
+const removeMap = document.querySelector(".removeMap");
+
+aboutUsImg.addEventListener("click",()=>{
+    divMap.style.display = "block";
+    removeMap.style.display = "block";
+})
+
+removeMap.addEventListener("click",(e)=>{
+    e.target.style.display = "none";
+    divMap.style.display = "none";
+})
+
+
+function initMap(){
+        map = new google.maps.Map(document.getElementById('map'),{
+            center: {lat : -34.397, lng : 150.644},
+            zoom : 10
+        });
+}
+
+
+/*
+About Us Google Map Event End
+*/
